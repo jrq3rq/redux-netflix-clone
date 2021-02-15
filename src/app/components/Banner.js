@@ -2,6 +2,9 @@ import React from "react";
 import "./Banner.css";
 
 const Banner = () => {
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+  }
   return (
     <header
       className="banner"
@@ -17,7 +20,12 @@ const Banner = () => {
           <button className="banner__button">Play</button>
           <button className="banner__button">My list</button>
         </div>
-        <h1 className="banner__description">test description here!</h1>
+        <h1 className="banner__description">
+          {truncate(
+            `test description here! test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!test description here!`,
+            150
+          )}
+        </h1>
       </div>
       <div className="banner--fadeButton" />
     </header>
@@ -25,3 +33,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+// Truncation
