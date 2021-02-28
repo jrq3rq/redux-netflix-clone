@@ -1,9 +1,9 @@
 import React from "react";
 import "./HomeScreen.css";
-import Nav from "./Nav";
-import Banner from "./Banner";
-import requests from "../Requests";
-import Row from "./Row";
+import Nav from "../app/components/Nav";
+import Banner from "../app/components/Banner";
+import requests from "../app/Requests";
+import Row from "../app/components/Row";
 
 function HomeScreen() {
   return (
